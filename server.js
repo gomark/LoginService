@@ -7,5 +7,5 @@ app.listen(port);
 console.log('todo list RESTful API server startedd on: ' + port);
 
 app.get("/url", (req, res, next) => {
-    res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+    res.json(["Tony Stark","Lisa","Michael","Ginger","Food"]);
 });
