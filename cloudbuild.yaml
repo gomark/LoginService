@@ -10,7 +10,7 @@ steps:
   - 'deployment'
   - '${_DEPLOYMENT_NAME}'
   - '${_POD_SPEC}=gcr.io/$PROJECT_ID/login-service:$COMMIT_SHA'
-  - 'namespace'
+  - '--namespace'
   - 'app1'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}'
