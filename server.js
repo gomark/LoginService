@@ -6,7 +6,9 @@ app.listen(port);
 
 console.log('todo list RESTful API server startedd on: ' + port);
 
-app.get("/url", (req, res, next) => {
+app.get("/loginService", (req, res, next) => {
   console.log("1")
-  res.json(["Tony Stark--","Lisa","Michael","Ginger","Food"]);
+  const URL_SERVICE1 = process.env.URL_SERVICE1;
+  const URL_SERVICE2 = process.env.URL_SERVICE2;
+  res.json([URL_SERVICE1, "Lisa", "Michael", URL_SERVICE2, req.query.userId]);
 });
