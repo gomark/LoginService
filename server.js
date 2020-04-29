@@ -11,5 +11,5 @@ app.get("/loginService", (req, res, next) => {
   console.log("INFO (2)");
   const URL_SERVICE1 = process.env.URL_SERVICE1;
   const URL_SERVICE2 = process.env.URL_SERVICE2;
-  res.json([URL_SERVICE1, "Lisa-xxxyy", "Michael", URL_SERVICE2, req.query.userId]);
+  res.json([URL_SERVICE1, "Putti-Lisa-xxxyy", "Michael", URL_SERVICE2, req.query.userId]);
 });
