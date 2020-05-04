@@ -13,6 +13,22 @@ app.get('/', (req, res) => {
     .end();
 });
 
+app.get('/cache', (req, res) => {
+  res
+    .setHeader("Cache-Control", "public; max-age=360")
+    .status(200)
+    .send('OK, cache #1')
+    .end();
+});
+
+app.get('/no-cache', (req, res) => {
+  res
+    .setHeader("Cache-Control", "no-cache")
+    .status(200)
+    .send('OK. no-cache')
+    .end();
+});
+
 app.get("/loginService", (req, res, next) => {
   console.log("DEBUG (1)");
   console.log("INFO (2)");
