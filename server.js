@@ -17,7 +17,7 @@ app.get('/cache', (req, res) => {
   res
     .set("Cache-Control", "public; max-age=360")
     .status(200)
-    .send('OK, cache #2')
+    .send('OK, cache #3')
     .end();
 });
 
@@ -25,7 +25,7 @@ app.get('/no-cache', (req, res) => {
   res
     .set("Cache-Control", "no-cache")
     .status(200)
-    .send('OK. no-cache')
+    .send('OK. no-cache #2')
     .end();
 });
 
